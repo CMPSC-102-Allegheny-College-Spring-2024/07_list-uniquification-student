@@ -1,0 +1,236 @@
+# --> check the Python program
+- datauniquifier/datauniquifier/main.py:
+  - description: Ensure that main.py file exists in the datauniquifier/datauniquifier/ directory
+    check: ConfirmFileExists
+  - description: Complete all TODOs, remove the TODO markers, and rewrite comments for main.py
+    check: MatchFileFragment
+    options:
+      fragment: TODO
+      count: 0
+      exact: true
+  - description: Add all 'Option(...)' in main.py
+    check: MatchFileFragment
+    options:
+      fragment: Option(...)
+      count: 3
+      exact: true
+  - description: Add 'getattr(' function in main.py
+    check: MatchFileFragment
+    options:
+      fragment: getattr(
+      count: 1
+      exact: true
+  - description: Add 'function_to_call(' function in main.py
+    check: MatchFileFragment
+    options:
+      fragment: function_to_call(
+      count: 1
+      exact: true
+  - description: Add correct import statement for 'Path' in main.py
+    check: MatchFileFragment
+    options:
+      fragment: "from pathlib import Path"
+      count: 1
+      exact: true
+  - description: Add correct 'format_bytes' in main.py
+    check: MatchFileFragment
+    options:
+      fragment: format_bytes
+      count: 1
+      exact: false
+  - description: Create a sufficient number of docstring (i.e., multiple-line) comments in main.py
+    check: CountMultipleLineComments
+    options:
+      language: "Python"
+      count: 2
+      exact: false
+  - description: Create a sufficient number of single-line comments in main.py
+    check: CountSingleLineComments
+    options:
+      language: "Python"
+      count: 16
+      exact: false
+
+# --> check the Python program
+- datauniquifier/datauniquifier/uniquify.py:
+  - description: Ensure that uniquify.py file exists in the datauniquifier/datauniquifier/ directory
+    check: ConfirmFileExists
+  - description: Complete all TODOs, remove the TODO markers, and rewrite comments for uniquify.py
+    check: MatchFileFragment
+    options:
+      fragment: TODO
+      count: 0
+      exact: true
+  - description: Add exactly threee '@timing' references in uniquify.py
+    check: MatchFileFragment
+    options:
+      fragment: "@timing"
+      count: 3
+      exact: true
+  - description: Create a sufficient number of docstring (i.e., multiple-line) comments in uniquify.py
+    check: CountMultipleLineComments
+    options:
+      language: "Python"
+      count: 3
+      exact: false
+  - description: Create a sufficient number of single-line comments in uniquify.py
+    check: CountSingleLineComments
+    options:
+      language: "Python"
+      count: 7
+      exact: false
+
+# --> check the Python program
+- datauniquifier/datauniquifier/extract.py:
+  - description: Ensure that extract.py file exists in the datauniquifier/datauniquifier/ directory
+    check: ConfirmFileExists
+  - description: Complete all TODOs, remove the TODO markers, and rewrite comments for extract.py
+    check: MatchFileFragment
+    options:
+      fragment: TODO
+      count: 0
+      exact: true
+  - description: Create a sufficient number of docstring (i.e., multiple-line) comments in extract.py
+    check: CountMultipleLineComments
+    options:
+      language: "Python"
+      count: 2
+      exact: false
+  - description: Create a sufficient number of single-line comments in extract.py
+    check: CountSingleLineComments
+    options:
+      language: "Python"
+      count: 7
+      exact: false
+
+# --> check the Python program
+- datauniquifier/datauniquifier/analyze.py:
+  - description: Ensure that analyze.py file exists in the datauniquifier/datauniquifier/ directory
+    check: ConfirmFileExists
+  - description: Complete all TODOs, remove the TODO markers, and rewrite comments for analyze.py
+    check: MatchFileFragment
+    options:
+      fragment: TODO
+      count: 0
+      exact: true
+  - description: Create a sufficient number of docstring (i.e., multiple-line) comments in analyze.py
+    check: CountMultipleLineComments
+    options:
+      language: "Python"
+      count: 3
+      exact: false
+  - description: Create a sufficient number of single-line comments in analyze.py
+    check: CountSingleLineComments
+    options:
+      language: "Python"
+      count: 2
+      exact: false
+
+# --> check the Python program
+- datauniquifier/tests/test_uniquify.py:
+  - description: Ensure that test_uniquify.py file exists in the datauniquifier/tests/ directory
+    check: ConfirmFileExists
+  - description: Complete all TODOs, remove the TODO markers, and rewrite comments for test_uniquify.py
+    check: MatchFileFragment
+    options:
+      fragment: TODO
+      count: 0
+      exact: true
+  - description: Have at least two test cases in test_uniquify.py
+    check: MatchFileFragment
+    options:
+      fragment: test_
+      count: 2
+      exact: false
+  - description: Create a sufficient number of docstring (i.e., multiple-line) comments in test_uniquify.py
+    check: CountMultipleLineComments
+    options:
+      language: "Python"
+      count: 4
+      exact: false
+
+# --> check the Python program
+- datauniquifier/tests/test_analyze.py:
+  - description: Ensure that test_analyze.py file exists in the datauniquifier/tests/ directory
+    check: ConfirmFileExists
+  - description: Complete all TODOs, remove the TODO markers, and rewrite comments for test_analyze.py
+    check: MatchFileFragment
+    options:
+      fragment: TODO
+      count: 0
+      exact: true
+  - description: Have at least six test cases in test_analyze.py
+    check: MatchFileFragment
+    options:
+      fragment: test_
+      count: 6
+      exact: false
+  - description: Create a sufficient number of docstring (i.e., multiple-line) comments in test_analyze.py
+    check: CountMultipleLineComments
+    options:
+      language: "Python"
+      count: 7
+      exact: false
+
+# --> check the Python program
+- datauniquifier/tests/test_extract.py:
+  - description: Ensure that test_extract.py file exists in the datauniquifier/tests/ directory
+    check: ConfirmFileExists
+  - description: Complete all TODOs, remove the TODO markers, and rewrite comments for test_extract.py
+    check: MatchFileFragment
+    options:
+      fragment: TODO
+      count: 0
+      exact: true
+  - description: Have at least two test cases in test_extract.py
+    check: MatchFileFragment
+    options:
+      fragment: test_
+      count: 2
+      exact: false
+  - description: Create a sufficient number of docstring (i.e., multiple-line) comments in test_extract.py
+    check: CountMultipleLineComments
+    options:
+      language: "Python"
+      count: 3
+      exact: false
+
+# --> check the technical writing for various characteristics
+- writing/reflection.md:
+  - description: Ensure that the reflection.md file exists in the writing/ directory
+    check: ConfirmFileExists
+  - description: Complete all TODOs, remove the TODO markers, and rewrite comments for reflection.md
+    check: MatchFileFragment
+    options:
+      fragment: TODO
+      count: 0
+      exact: true
+  - description: Delete the 'Add Your Name Here' prompt in the reflection file
+    check: MatchFileFragment
+    options:
+      fragment: "Add Your Name Here"
+      count: 0
+      exact: true
+  - description: Write a minimum number of meaningful words in the reflection
+    check: CountFileWords
+    options:
+      count: 800
+      exact: false
+  - description: Confirm that the markdown file has the correct number of headers
+    check: CountMarkdownTags
+    options:
+      tag: heading
+      count: 19
+      exact: false
+  - description: Confirm that the markdown file has the correct number of fenced code blocks
+    check: CountMarkdownTags
+    options:
+      tag: code_block
+      count: 6
+      exact: false
+
+# --> check that the number of commits in the Git repository is beyond a threshold
+- description: Have at least a specific minimum of commits (5) in repository
+  check: CountCommits
+  options:
+    count: 5
